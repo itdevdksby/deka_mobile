@@ -1,0 +1,1 @@
+const String NIK_EXAMPLE = '20101720';

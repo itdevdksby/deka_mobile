@@ -1,0 +1,1 @@
+ D:\\_Projects\\_flutter\\deka_mobile\\.dart_tool\\flutter_build\\ae71268a4a30397b0c1e273363d4a378\\native_assets.yaml: 

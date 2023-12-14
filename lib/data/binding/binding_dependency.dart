@@ -1,0 +1,37 @@
+import 'package:get/get.dart';
+
+import '../../config/local/database_config.dart';
+import '../../modules/login/login_controller.dart';
+import '../../modules/rekap_izin/rekap_izin_controller.dart';
+import '../../utils/environment.dart';
+import '../provider/login_provider.dart';
+import '../provider/rekap_izin_provider.dart';
+import '../repository/login_repository.dart';
+import '../repository/rekap_izin_repository.dart';
+
+class BindingDependency implements Bindings {
+  @override
+  Future<void> dependencies() async {
+    final env = ConfigEnvironments.getEnvironment();
+
+    //Database
+    final database = await $FloorDatabaseConfig.databaseBuilder(env.dbName).build();
+    Get.lazyPut<DatabaseConfig>(() => database);
+
+    //Provider
+    Get.lazyPut(() => LoginProvider());
+    Get.lazyPut(() => RekapIzinProvider());
+
+    //Controller
+    Get.lazyPut(() => LoginController(
+      repository: Get.find()
+    ));
+    Get.lazyPut(() => RekapIzinController(
+        repository: Get.find()
+    ));
+
+    //Repository
+    Get.lazyPut<LoginRepository>(() => LoginRepositoryImpl(Get.find(), Get.find()));
+    Get.lazyPut<RekapIzinRepository>(() => RekapIzinRepositoryImpl(Get.find()));
+  }
+}

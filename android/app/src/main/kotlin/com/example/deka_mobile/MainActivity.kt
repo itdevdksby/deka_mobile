@@ -1,4 +1,4 @@
-package com.example.deka_mobile
+package com.duakelinci.deka_mobile_apps
 
 import io.flutter.embedding.android.FlutterActivity
 
