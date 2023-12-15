@@ -329,17 +329,12 @@ class _$ProfileDao extends ProfileDao {
 
   @override
   Future<void> insertEntity(ProfileEntity model) async {
-    model.status = 1;
-    model.statusKirim = 0;
-    model.createdAt = DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
-    model.updatedAt = DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
     await _profileEntityInsertionAdapter.insert(
         model, OnConflictStrategy.replace);
   }
 
   @override
   Future<void> updateEntity(ProfileEntity model) async {
-    model.updatedAt = DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
     await _profileEntityUpdateAdapter.update(model, OnConflictStrategy.replace);
   }
 
@@ -462,17 +457,12 @@ class _$PengaturanAutocodeAndroidDao extends PengaturanAutocodeAndroidDao {
 
   @override
   Future<void> insertEntity(PengaturanAutocodeAndroidEntity model) async {
-    model.status = 1;
-    model.statusKirim = 0;
-    model.createdAt = DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
-    model.updatedAt = DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
     await _pengaturanAutocodeAndroidEntityInsertionAdapter.insert(
         model, OnConflictStrategy.replace);
   }
 
   @override
   Future<void> updateEntity(PengaturanAutocodeAndroidEntity model) async {
-    model.updatedAt = DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
     await _pengaturanAutocodeAndroidEntityUpdateAdapter.update(
         model, OnConflictStrategy.replace);
   }

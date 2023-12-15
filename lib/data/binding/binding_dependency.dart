@@ -1,3 +1,4 @@
+import 'package:deka_mobile/modules/login/register/register_controller.dart';
 import 'package:get/get.dart';
 
 import '../../config/local/database_config.dart';
@@ -23,12 +24,9 @@ class BindingDependency implements Bindings {
     Get.lazyPut(() => RekapIzinProvider());
 
     //Controller
-    Get.lazyPut(() => LoginController(
-      repository: Get.find()
-    ));
-    Get.lazyPut(() => RekapIzinController(
-        repository: Get.find()
-    ));
+    Get.lazyPut(() => LoginController(repository: Get.find()));
+    Get.lazyPut(() => RegisterController(repository: Get.find()));
+    Get.lazyPut(() => RekapIzinController(repository: Get.find()));
 
     //Repository
     Get.lazyPut<LoginRepository>(() => LoginRepositoryImpl(Get.find(), Get.find()));

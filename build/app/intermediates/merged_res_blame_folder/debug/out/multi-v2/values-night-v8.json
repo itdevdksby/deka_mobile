@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.duakelinci.deka_mobile_apps.app-mergeDebugResources-9:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.duakelinci.deka_mobile_apps.app-mergeDebugResources-20:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "D:\\_Projects\\_flutter\\deka_mobile\\android\\app\\src\\main\\res\\values-night\\styles.xml",

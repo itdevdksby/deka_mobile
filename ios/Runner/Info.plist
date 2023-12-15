@@ -15,7 +15,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>deka_mobile</string>
+	<string>Deka Mobile</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -23,9 +23,16 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<string>23.12.14.0001</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<!-- for Image Picker -->
+    <key>NSCameraUsageDescription</key>
+    <string>This app requires access to the camera</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>This app does not require access to the microphone</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>This app requires access to the photo library</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

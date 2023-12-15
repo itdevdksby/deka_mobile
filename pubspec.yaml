@@ -40,6 +40,12 @@ dependencies:
   #https://pub.dev/packages/device_info_plus
   device_info_plus: ^9.1.1
 
+  #https://pub.dev/packages/android_id
+  android_id: ^0.3.6
+
+  #https://pub.dev/packages/package_info_plus
+  package_info_plus: ^5.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -63,6 +69,15 @@ flutter:
     - assets/fonts/nunitosans/
     - assets/icons/
     - assets/images/
+
+  fonts:
+    - family: Nunitosans
+      fonts:
+        - asset: assets/fonts/nunitosans/Nunitosans.ttf
+        - asset: assets/fonts/nunitosans/Nunitosans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/nunitosans/Nunitosans-Light.ttf
+          weight: 300
 
 flutter_launcher_icons:
   android: "launcher_icon"

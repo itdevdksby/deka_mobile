@@ -26,7 +26,9 @@ showSnackBarMessage(BuildContext context, TypeMessage typeMessage, String messag
       borderRadius: BorderRadius.circular(10),
     ),
   );
-  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  WidgetsBinding.instance.addPostFrameCallback((_) =>
+      ScaffoldMessenger.of(context).showSnackBar(snackBar)
+  );
 }
 
 enum TypeMessage {

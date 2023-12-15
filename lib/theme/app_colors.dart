@@ -8,6 +8,7 @@ Color colorPrimaryDark = HexColor("#eea24a");
 Color colorOnPrimary = HexColor("#DAFFFB");
 Color colorText = HexColor("#140f1f");
 Color colorRed100 = HexColor("#FFCDD2");
+Color colorGrey200 = HexColor("#EEEEEE");
 Color colorGreen100 = HexColor("#C8E6C9");
 Color colorBlue100 = HexColor("#BBDEFB");
 

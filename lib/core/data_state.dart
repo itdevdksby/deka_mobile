@@ -12,9 +12,13 @@ abstract class ResponseState<T> {
   const ResponseState({this.data, this.error});
 }
 
-class ResponseDefault extends ResponseState {}
+class ResponseDefault extends ResponseState {
+  const ResponseDefault() : super(data: null, error: null);
+}
 
-class ResponseLoading extends ResponseState {}
+class ResponseLoading extends ResponseState {
+  const ResponseLoading() : super(data: null, error: null);
+}
 
 class ResponseSuccess<T> extends ResponseState<T> {
   const ResponseSuccess(T data) : super(data: data);

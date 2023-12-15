@@ -6,6 +6,10 @@ analyzer
 2.19
 file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/analyzer-5.13.0/
 file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/analyzer-5.13.0/lib/
+android_id
+2.12
+file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/android_id-0.3.6/
+file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/android_id-0.3.6/lib/
 archive
 2.12
 file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.4.9/
@@ -302,6 +306,14 @@ package_config
 2.12
 file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/package_config-2.1.0/
 file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/package_config-2.1.0/lib/
+package_info_plus
+3.2
+file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/package_info_plus-5.0.1/
+file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/package_info_plus-5.0.1/lib/
+package_info_plus_platform_interface
+2.12
+file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/package_info_plus_platform_interface-2.0.1/
+file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/package_info_plus_platform_interface-2.0.1/lib/
 path
 2.12
 file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.8.3/

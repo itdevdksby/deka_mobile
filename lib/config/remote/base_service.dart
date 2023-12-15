@@ -12,8 +12,13 @@ class BaseService extends GetConnect {
     httpClient.timeout = Duration(seconds: 60);//1 Menit
     httpClient.addResponseModifier((request, response) async {
       print("Status: ${response.status.code}");
+      if(response.status.code! >= 300){
+        print(response.statusText);
+        print(response.body);
+      }
       // print(request.headers);
-      // print(response.body);
+      // print(response.bodyString);
+      // print(response.statusText);
       return response;
     });
     httpClient.addRequestModifier<dynamic>((request) async {
