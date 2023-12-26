@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:deka_mobile/models/domain/register_domain.dart';
+import 'package:deka_mobile/utils/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -79,6 +80,9 @@ class RegisterController extends GetxController{
       stateRegister(ResponseLoading());
 
       final response = await repository.postRegister(stateDomain.value);
+
+      showSnackBarMessage(Get.context!, TypeMessage.SUCCESS,
+          msgOkRegister, DurationMessage.LENGTH_SHORT);
       stateRegister(ResponseSuccess(response));
     }on FailureResponse catch(e) {
       showSnackBarMessage(Get.context!, TypeMessage.ERROR,

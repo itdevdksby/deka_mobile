@@ -1,4 +1,3 @@
-
 String appName = 'Deka Mobile';
 
 //Message
@@ -13,11 +12,15 @@ String msgGenerateError = 'gagal generate';//add text in left / start message
 
 String msgFieldEmpty = 'Isian ini masih kosong';
 String msgFieldNotValid = 'Isian ini tidak valid';
-String msgNikNotValid = 'Isian NIK tidak valid';
+String msgFieldNikNotValid = 'Isian NIK tidak valid';
+
+String msgOkRegister = 'Mohon Cek Email Untuk Aktivasi';
+String msgOkReset = 'Mohon Cek Email Untuk Informasi Lebih Lanjut';
 
 String home = 'Home';
 String greeting = 'Halo';
-String greetingText = "Silahkan login untuk melanjutkan";
+String greetingTextLogin = 'Silahkan login untuk melanjutkan';
+String greetingTextReset = 'Catatan : \n1. Masukkan NIK pegawai yang terdaftar, \n2. Password akan dikirimkan ke email yang terdaftar di JPayroll.';
 String username = 'Username';
 String password = 'Password';
 String nik = 'NIK';

@@ -1,4 +1,5 @@
 import 'package:deka_mobile/modules/login/register/register_controller.dart';
+import 'package:deka_mobile/modules/login/reset/reset_controller.dart';
 import 'package:get/get.dart';
 
 import '../../config/local/database_config.dart';
@@ -17,19 +18,20 @@ class BindingDependency implements Bindings {
 
     //Database
     final database = await $FloorDatabaseConfig.databaseBuilder(env.dbName).build();
-    Get.lazyPut<DatabaseConfig>(() => database);
+    Get.lazyPut<DatabaseConfig>(() => database, fenix: true);
 
     //Provider
-    Get.lazyPut(() => LoginProvider());
-    Get.lazyPut(() => RekapIzinProvider());
+    Get.lazyPut(() => LoginProvider(), fenix: true);
+    Get.lazyPut(() => RekapIzinProvider(), fenix: true);
 
     //Controller
-    Get.lazyPut(() => LoginController(repository: Get.find()));
-    Get.lazyPut(() => RegisterController(repository: Get.find()));
-    Get.lazyPut(() => RekapIzinController(repository: Get.find()));
+    Get.lazyPut(() => LoginController(repository: Get.find()), fenix: true);
+    Get.lazyPut(() => RegisterController(repository: Get.find()), fenix: true);
+    Get.lazyPut(() => ResetController(repository: Get.find()), fenix: true);
+    Get.lazyPut(() => RekapIzinController(repository: Get.find()), fenix: true);
 
     //Repository
-    Get.lazyPut<LoginRepository>(() => LoginRepositoryImpl(Get.find(), Get.find()));
-    Get.lazyPut<RekapIzinRepository>(() => RekapIzinRepositoryImpl(Get.find()));
+    Get.lazyPut<LoginRepository>(() => LoginRepositoryImpl(Get.find(), Get.find()), fenix: true);
+    Get.lazyPut<RekapIzinRepository>(() => RekapIzinRepositoryImpl(Get.find()), fenix: true);
   }
 }

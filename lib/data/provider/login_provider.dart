@@ -66,4 +66,22 @@ class LoginProvider extends BaseService {
       throw FailureResponse.fromJson(response.body ?? response.statusText);
     }
   }
+
+  Future<GeneralModel> getReset({
+    required String nik
+  }) async{
+    final headers = <String, String>{};
+    final formData = FormData({});
+    final params = <String, dynamic>{
+      'nik': nik
+    };
+
+    final response = await get("reset-password", query: params, headers: headers);
+    if(response.status.isOk){
+      GeneralModel value = GeneralModel.fromJson(response.body);
+      return value;
+    } else {
+      throw FailureResponse.fromJson(response.body ?? response.statusText);
+    }
+  }
 }

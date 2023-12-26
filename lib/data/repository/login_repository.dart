@@ -19,6 +19,7 @@ abstract class LoginRepository {
   Future<ProfileEntity> getLogin(String username, String password, String firebaseId);
   Future<EmployeeModel> getCheckNik(String nik);
   Future<GeneralModel> postRegister(RegisterDomain domain);
+  Future<GeneralModel> getReset(String nik);
 }
 
 //data - repository
@@ -69,5 +70,10 @@ class LoginRepositoryImpl extends LoginRepository {
 
     final json = jsonEncode(domain).toString();
     return await _loginProvider.postRegister(data: json);
+  }
+
+  @override
+  Future<GeneralModel> getReset(String nik) async {
+    return await _loginProvider.getReset(nik: nik);
   }
 }

@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
+import 'package:deka_mobile/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -98,7 +99,7 @@ class LoginPage extends GetView<LoginController> {
                           fontSize: 22))),
               Transform.translate(
                   offset: Offset(20, -5),
-                  child: Text(greetingText,
+                  child: Text(greetingTextLogin,
                       style: TextStyle(color: colorText, fontSize: 12))),
               StandardTextField(
                   editingController: controller.editingControllers[0],
@@ -119,7 +120,7 @@ class LoginPage extends GetView<LoginController> {
                       alignment: Alignment.topRight,
                       child: TextButton(
                         onPressed: () {
-                          // Get.toNamed(ResetPassword.nameRoute);
+                          Get.toNamed(AppRoutes.RESET);
                         },
                         child: Text(reset,
                             style: TextStyle(color: colorText)),
@@ -129,7 +130,9 @@ class LoginPage extends GetView<LoginController> {
                   titleHint: login.toUpperCase(),
                   isLoading: controller.initLoading.value,
                   onPressed: () {
-                    controller.getLogin();
+                    if (controller.formKey.currentState!.validate()) {
+                      controller.getLogin();
+                    }
                   }
               ),
               Padding(
@@ -147,7 +150,7 @@ class LoginPage extends GetView<LoginController> {
                       alignment: Alignment.center,
                       child: TextButton(
                         onPressed: () {
-                          // Get.toNamed(Register.nameRoute);
+                          Get.toNamed(AppRoutes.REGISTER);
                         },
                         child: Text("Daftar Sekarang ?",
                             style: TextStyle(

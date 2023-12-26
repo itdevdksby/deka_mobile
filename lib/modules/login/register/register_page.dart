@@ -39,6 +39,8 @@ class RegisterPage extends GetView<RegisterController> {
           controller.initLoading.value = false;
         }else if (controller.stateRegister.value is ResponseSuccess){
           controller.initLoading.value = false;
+
+          WidgetsBinding.instance.addPostFrameCallback((_) => Get.back());
         }
 
         return _buildBody();
@@ -68,7 +70,7 @@ class RegisterPage extends GetView<RegisterController> {
                     Expanded(child: StandardTextField(
                       editingController: controller.editingControllers[0],
                       titleHint: nik,
-                      msgError: msgNikNotValid,
+                      msgError: msgFieldNikNotValid,
                       maxLength: 8,
                       iconField: Icon(Icons.contact_mail_outlined),
                       inputType: TextInputType.number,
@@ -82,7 +84,7 @@ class RegisterPage extends GetView<RegisterController> {
                               showSnackBarMessage(
                                 context,
                                 TypeMessage.ERROR,
-                                msgNikNotValid,
+                                msgFieldNikNotValid,
                                 DurationMessage.LENGTH_SHORT)
                             );
                           } else {
@@ -193,8 +195,9 @@ class RegisterPage extends GetView<RegisterController> {
                                 "Foto masih kosong", DurationMessage.LENGTH_SHORT);
                             return;
                           }
-
-                          controller.postRegister();
+                          if (controller.formKey.currentState!.validate()) {
+                            controller.postRegister();
+                          }
                         }
                     )
                   ]))
