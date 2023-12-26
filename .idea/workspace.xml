@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24616451-83ac-427c-a510-bfe92daea220" name="Changes" comment="config register &amp; standard widget form">
+    <list default="true" id="24616451-83ac-427c-a510-bfe92daea220" name="Changes" comment="config reset">
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/ae71268a4a30397b0c1e273363d4a378/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/ae71268a4a30397b0c1e273363d4a378/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/ae71268a4a30397b0c1e273363d4a378/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/ae71268a4a30397b0c1e273363d4a378/app.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/ae71268a4a30397b0c1e273363d4a378/debug_android_application.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/ae71268a4a30397b0c1e273363d4a378/debug_android_application.stamp" afterDir="false" />
@@ -12,7 +12,6 @@
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/ae71268a4a30397b0c1e273363d4a378/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/ae71268a4a30397b0c1e273363d4a378/kernel_snapshot.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/ae71268a4a30397b0c1e273363d4a378/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/ae71268a4a30397b0c1e273363d4a378/kernel_snapshot.stamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deka_mobile.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deka_mobile.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/42aecaae4b71bdb20ce84a1d6000b2ce.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/42aecaae4b71bdb20ce84a1d6000b2ce.cache.dill.track.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
@@ -24,12 +23,11 @@
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk.sha1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/data/binding/binding_dependency.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/binding/binding_dependency.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/provider/login_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/provider/login_provider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/repository/login_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/repository/login_repository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/provider/rekap_izin_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/provider/rekap_izin_provider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/repository/rekap_izin_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/repository/rekap_izin_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/login/login_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/login/login_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/modules/login/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/login/login_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/modules/login/register/register_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/login/register/register_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/modules/login/register/register_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/login/register/register_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/rekap_izin/rekap_izin_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/rekap_izin/rekap_izin_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/routes/app_pages.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes/app_pages.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/utils/strings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/strings.dart" afterDir="false" />
     </list>
@@ -60,18 +58,18 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/_Projects/_flutter/deka_mobile/lib/data/binding&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/_Projects/_flutter/deka_mobile/lib/models/response&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\_Projects\_flutter\deka_mobile\lib\models\response" />
+      <recent name="D:\_Projects\_flutter\deka_mobile\lib\modules\dashboard" />
       <recent name="D:\_Projects\_flutter\deka_mobile\lib\data\binding" />
       <recent name="D:\_Projects\_flutter\deka_mobile\lib\modules\login\reset" />
       <recent name="D:\_Projects\_flutter\deka_mobile\lib\theme" />
-      <recent name="D:\_Projects\_flutter\deka_mobile\lib\models\domain" />
-      <recent name="D:\_Projects\_flutter\deka_mobile\lib\models\response" />
     </key>
   </component>
   <component name="RunManager" selected="Flutter.main.dart">
@@ -127,7 +125,21 @@
       <option name="project" value="LOCAL" />
       <updated>1702633747487</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="config login">
+      <created>1703563183473</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703563183473</updated>
+    </task>
+    <task id="LOCAL-00006" summary="config reset">
+      <created>1703563195893</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1703563195893</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,7 +160,9 @@
     <MESSAGE value="config flutter" />
     <MESSAGE value="config project with getx architecture" />
     <MESSAGE value="config register &amp; standard widget form" />
-    <option name="LAST_COMMIT_MESSAGE" value="config register &amp; standard widget form" />
+    <MESSAGE value="config login" />
+    <MESSAGE value="config reset" />
+    <option name="LAST_COMMIT_MESSAGE" value="config reset" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

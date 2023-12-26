@@ -66,10 +66,10 @@ class RekapIzinPage extends GetView<RekapIzinController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Image(
-            //     height: 200,
-            //     fit: BoxFit.cover,
-            //     image: AssetImage("assets/images/gif_no_data.gif")),
+            Image(
+                height: 200,
+                fit: BoxFit.cover,
+                image: AssetImage("assets/images/gif_no_data.gif")),
             TextButton(
                 child: Text(
                   failure.message ?? "Tidak Ada Data",

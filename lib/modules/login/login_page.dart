@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../core/data_state.dart';
-import '../../data/entities/profile/profile.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/show_snackbar_message.dart';
 import '../../theme/standard_button_primary.dart';
@@ -21,13 +20,6 @@ class LoginPage extends GetView<LoginController> {
       body: Obx(() {
         if (controller.stateLogin.value is ResponseLoading){
           controller.initLoading.value = true;
-        }else if (controller.stateLogin.value is ResponseSuccess){
-          controller.initLoading.value = false;
-          final response = controller.stateLogin.value.data as ProfileEntity;
-
-          WidgetsBinding.instance.addPostFrameCallback((_) =>
-              showSnackBarMessage(context, TypeMessage.SUCCESS,
-                  response.name.toString(), DurationMessage.LENGTH_SHORT));
         }else if (controller.stateLogin.value is ResponseFailed){
           controller.initLoading.value = false;
           final response = controller.stateLogin.value.error;
@@ -35,6 +27,12 @@ class LoginPage extends GetView<LoginController> {
           WidgetsBinding.instance.addPostFrameCallback((_) =>
               showSnackBarMessage(context, TypeMessage.ERROR,
                   response!.message.toString(), DurationMessage.LENGTH_SHORT));
+        }else if (controller.stateLogin.value is ResponseSuccess){
+          controller.initLoading.value = false;
+
+          WidgetsBinding.instance.addPostFrameCallback((_) =>
+              Get.offAllNamed(AppRoutes.DASHBOARD)
+          );
         }
 
         return _buildBody();

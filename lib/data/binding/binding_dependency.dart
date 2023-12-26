@@ -1,3 +1,4 @@
+import 'package:deka_mobile/modules/dashboard/dashboard_controller.dart';
 import 'package:deka_mobile/modules/login/register/register_controller.dart';
 import 'package:deka_mobile/modules/login/reset/reset_controller.dart';
 import 'package:get/get.dart';
@@ -28,10 +29,11 @@ class BindingDependency implements Bindings {
     Get.lazyPut(() => LoginController(repository: Get.find()), fenix: true);
     Get.lazyPut(() => RegisterController(repository: Get.find()), fenix: true);
     Get.lazyPut(() => ResetController(repository: Get.find()), fenix: true);
+    Get.lazyPut(() => DashboardController(repository: Get.find()), fenix: true);
     Get.lazyPut(() => RekapIzinController(repository: Get.find()), fenix: true);
 
     //Repository
     Get.lazyPut<LoginRepository>(() => LoginRepositoryImpl(Get.find(), Get.find()), fenix: true);
-    Get.lazyPut<RekapIzinRepository>(() => RekapIzinRepositoryImpl(Get.find()), fenix: true);
+    Get.lazyPut<RekapIzinRepository>(() => RekapIzinRepositoryImpl(Get.find(), Get.find()), fenix: true);
   }
 }
