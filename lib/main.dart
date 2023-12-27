@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: theme(),
       title: appName.tr,
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.LOGIN,
+      initialRoute: AppRoutes.REKAP_IZIN,
       getPages: AppPages.pages,
       translationsKeys: AppTranslation.translations,
       locale: Get.deviceLocale,

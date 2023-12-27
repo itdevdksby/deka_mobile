@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_constructors
+import 'package:deka_mobile/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,25 +21,28 @@ class RekapIzinPage extends GetView<RekapIzinController> {
     return Scaffold(
       appBar: _buildAppBar(),
       body: Obx(() {
-        if (controller.rekapIzin.value is ResponseLoading){
+        if (controller.stateRekapIzin.value is ResponseLoading){
           return Center(child: CircularProgressIndicator());
-        }else if (controller.rekapIzin.value is ResponseSuccess){
-          final response = controller.rekapIzin.value.data as List<RekapIzinModel>;
+        }else if (controller.stateRekapIzin.value is ResponseSuccess){
+          final response = controller.stateRekapIzin.value.data as List<RekapIzinModel>;
           return _buildBody(response);
-        }else if (controller.rekapIzin.value is ResponseFailed){
-          final error = controller.rekapIzin.value.error;
+        }else if (controller.stateRekapIzin.value is ResponseFailed){
+          final error = controller.stateRekapIzin.value.error;
           return _buildError(error!);
         }else {
           return SizedBox();
         }
       }),
-      floatingActionButton: FloatingActionButton(
-          shape: CircleBorder(),
-          backgroundColor: colorPrimary,
-          onPressed: () async {
-            print("Button Add");
-          },
-          child: Icon(Icons.add, color: Colors.white)),
+      floatingActionButton: Obx(() => Visibility(visible: controller.initVisibleAdd.value,
+          child: FloatingActionButton(
+              shape: CircleBorder(),
+              backgroundColor: colorPrimary,
+              onPressed: () {
+                Get.toNamed(AppRoutes.INPUT_REKAP_IZIN);
+              },
+              child: Icon(Icons.add, color: Colors.white)
+          )
+      )),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
@@ -49,6 +53,7 @@ class RekapIzinPage extends GetView<RekapIzinController> {
 
   _buildBody(List<RekapIzinModel> data) {
     return ListView.builder(
+      controller: controller.scrollControllers,
       itemCount: data.length,
       itemBuilder: (context, index) {
         return RekapIzinTile(

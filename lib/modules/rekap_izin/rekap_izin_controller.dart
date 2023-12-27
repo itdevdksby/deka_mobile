@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 
 import '../../core/data_state.dart';
@@ -6,23 +9,54 @@ import '../../core/failure_response.dart';
 import '../../data/repository/rekap_izin_repository.dart';
 
 class RekapIzinController extends GetxController {
-  final formKey = GlobalKey<FormState>();
-  final formControllers = List.generate(5, (index) => TextEditingController());
-
   final RekapIzinRepository repository;
   RekapIzinController({
     required this.repository,
   });
 
-  final rekapIzin = Rx<ResponseState>(ResponseDefault());
+  final formKey = GlobalKey<FormState>();
+  final editingControllers = List.generate(2, (index) => TextEditingController());
+  final scrollControllers = ScrollController();
+  var initVisibleAdd = true.obs;
+  var initLoadingInput = false.obs;
+
+  @override
+  void onInit() {
+    super.onInit();
+    scrollControllers.addListener(() {
+      if (scrollControllers.position.userScrollDirection == ScrollDirection.reverse) {
+        if (initVisibleAdd.value) {
+          initVisibleAdd.value = false;
+        }
+      } else if (scrollControllers.position.userScrollDirection == ScrollDirection.forward) {
+        if (!initVisibleAdd.value) {
+          initVisibleAdd.value = true;
+        }
+      }
+    });
+  }
+
+  final stateRekapIzin = Rx<ResponseState>(ResponseDefault());
   void getRekapIzin() async {
     try {
-      rekapIzin(ResponseLoading());
+      stateRekapIzin(ResponseLoading());
 
       final response = await repository.getRekapIzin();
-      rekapIzin(ResponseSuccess(response));
+      stateRekapIzin(ResponseSuccess(response));
     }on FailureResponse catch(e) {
-      rekapIzin(ResponseFailed(e));
+      stateRekapIzin(ResponseFailed(e));
+    }
+  }
+
+  final statePostRekapIzin = Rx<ResponseState>(ResponseDefault());
+  void postRekapIzin() async {
+    try {
+      statePostRekapIzin(ResponseLoading());
+
+      final response = await repository.getRekapIzin();
+      statePostRekapIzin(ResponseSuccess(response));
+    }on FailureResponse catch(e) {
+      statePostRekapIzin(ResponseFailed(e));
     }
   }
 }
